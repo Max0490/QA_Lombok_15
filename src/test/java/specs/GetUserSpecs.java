@@ -10,7 +10,7 @@ import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
 import static org.hamcrest.core.IsNull.notNullValue;
 
-public class GetSpecs {
+public class GetUserSpecs {
 
     public static RequestSpecification getUserRequestSpec = with()
             .filter(withCustomTemplates())

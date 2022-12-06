@@ -9,17 +9,19 @@ import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
 
-public class NotFoundSpecs {
+public class CreateUserNegativeSpecs {
 
-    public static RequestSpecification notFoundUserRequestSpec = with()
+    public static RequestSpecification createUserNegativeRequestSpec = with()
             .filter(withCustomTemplates())
             .baseUri("https://reqres.in")
-            .basePath("/api/users/278127")
+            .basePath("/api/users")
             .log().all();
 
-    public static ResponseSpecification notFoundUserResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification createUserNegativeResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
-            .expectStatusCode(404) // Not Found
+            .expectStatusCode(415) // Unsupported Media Type
             .build();
+
+    //TODO
 }

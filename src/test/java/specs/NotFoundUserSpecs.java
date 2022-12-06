@@ -8,22 +8,18 @@ import static helpers.CustomeApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
-import static io.restassured.http.ContentType.JSON;
-import static org.hamcrest.Matchers.notNullValue;
 
-public class CreateSpecs {
-    public static RequestSpecification createUserRequestSpec = with()
+public class NotFoundUserSpecs {
+
+    public static RequestSpecification notFoundUserRequestSpec = with()
             .filter(withCustomTemplates())
             .baseUri("https://reqres.in")
-            .basePath("/api/users")
-            .log().all()
-            .contentType(JSON);
+            .basePath("/api/users/278127")
+            .log().all();
 
-    public static ResponseSpecification createUserResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification notFoundUserResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
-            .expectStatusCode(201)
-            .expectBody("name", notNullValue())
+            .expectStatusCode(404) // Not Found
             .build();
-
 }

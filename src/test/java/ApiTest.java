@@ -11,17 +11,17 @@ import static io.restassured.http.ContentType.JSON;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import static specs.CreateErrorSpecs.createUserNegativeRequestSpec;
-import static specs.CreateErrorSpecs.createUserNegativeResponseSpec;
-import static specs.CreateSpecs.createUserRequestSpec;
-import static specs.CreateSpecs.createUserResponseSpec;
-import static specs.DeleteSpecs.deleteUserRequestSpec;
-import static specs.DeleteSpecs.deleteUserResponseSpec;
-import static specs.GetSpecs.getUserRequestSpec;
-import static specs.GetSpecs.getUserResponseSpec;
+import static specs.CreateUserNegativeSpecs.createUserNegativeRequestSpec;
+import static specs.CreateUserNegativeSpecs.createUserNegativeResponseSpec;
+import static specs.CreateUserSpecs.createUserRequestSpec;
+import static specs.CreateUserSpecs.createUserResponseSpec;
+import static specs.DeleteUserSpecs.deleteUserRequestSpec;
+import static specs.DeleteUserSpecs.deleteUserResponseSpec;
+import static specs.GetUserSpecs.getUserRequestSpec;
+import static specs.GetUserSpecs.getUserResponseSpec;
 
-import static specs.NotFoundSpecs.notFoundUserRequestSpec;
-import static specs.NotFoundSpecs.notFoundUserResponseSpec;
+import static specs.NotFoundUserSpecs.notFoundUserRequestSpec;
+import static specs.NotFoundUserSpecs.notFoundUserResponseSpec;
 
 public class ApiTest {
 

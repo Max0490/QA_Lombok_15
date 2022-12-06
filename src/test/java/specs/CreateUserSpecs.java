@@ -8,18 +8,22 @@ import static helpers.CustomeApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
+import static io.restassured.http.ContentType.JSON;
+import static org.hamcrest.Matchers.notNullValue;
 
-public class DeleteSpecs {
-
-    public static RequestSpecification deleteUserRequestSpec = with()
+public class CreateUserSpecs {
+    public static RequestSpecification createUserRequestSpec = with()
             .filter(withCustomTemplates())
             .baseUri("https://reqres.in")
-            .basePath("/api/users/2")
-            .log().all();
+            .basePath("/api/users")
+            .log().all()
+            .contentType(JSON);
 
-    public static ResponseSpecification deleteUserResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification createUserResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
-            .expectStatusCode(204) // No Content
+            .expectStatusCode(201)
+            .expectBody("name", notNullValue())
             .build();
+
 }

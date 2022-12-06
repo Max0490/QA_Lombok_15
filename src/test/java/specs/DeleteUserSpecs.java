@@ -9,19 +9,17 @@ import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
 
-public class CreateErrorSpecs {
+public class DeleteUserSpecs {
 
-    public static RequestSpecification createUserNegativeRequestSpec = with()
+    public static RequestSpecification deleteUserRequestSpec = with()
             .filter(withCustomTemplates())
             .baseUri("https://reqres.in")
-            .basePath("/api/users")
+            .basePath("/api/users/2")
             .log().all();
 
-    public static ResponseSpecification createUserNegativeResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification deleteUserResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
-            .expectStatusCode(415) // Unsupported Media Type
+            .expectStatusCode(204) // No Content
             .build();
-
-    //TODO
 }
