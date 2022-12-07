@@ -70,7 +70,7 @@ public class ApiTest {
         assertThat(responseModel.getName()).isEqualTo("morpheus");
     }
 
-    @Test
+/*    @Test
     void createUserLombokTest() {
         UserCreationModel userModel = new UserCreationModel();
         userModel.setJob("leader");
@@ -90,9 +90,9 @@ public class ApiTest {
 
         assertThat(responseModel.getJob()).isEqualTo("leader");
         assertThat(responseModel.getName()).isEqualTo("morpheus");
-    }
+    }*/
 
-    @Test
+/*    @Test
     void createUserWithAllureListenerTest() {
         UserCreationModel userModel = new UserCreationModel();
         userModel.setJob("leader");
@@ -113,9 +113,9 @@ public class ApiTest {
 
         assertThat(responseModel.getJob()).isEqualTo("leader");
         assertThat(responseModel.getName()).isEqualTo("morpheus");
-    }
+    }*/
 
-    @Test
+/*    @Test
     void createUserWithCustomAllureListenerTest() {
         UserCreationModel userModel = new UserCreationModel();
         userModel.setJob("leader");
@@ -136,9 +136,9 @@ public class ApiTest {
 
         assertThat(responseModel.getJob()).isEqualTo("leader");
         assertThat(responseModel.getName()).isEqualTo("morpheus");
-    }
+    }*/
 
-    @Test
+/*   @Test
     void createUserWithSpecsTest() {
         UserCreationModel userModel = new UserCreationModel();
         userModel.setJob("leader");
@@ -156,7 +156,7 @@ public class ApiTest {
 
         assertThat(responseModel.getJob()).isEqualTo("leader");
         assertThat(responseModel.getName()).isEqualTo("morpheus");
-    }
+    }*/
 
     @Test
     void createUserNegativeTest() {
